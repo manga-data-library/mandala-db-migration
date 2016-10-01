@@ -21,7 +21,7 @@ CREATE TABLE `manga` (
   INDEX `idx_manga_02` (`author_id`),
   INDEX `idx_manga_03` (`original_author_id`),
   INDEX `idx_manga_04` (`magazine_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='漫画';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='漫画';
 
 CREATE TABLE `author` (
   `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '作者ID',
@@ -31,7 +31,7 @@ CREATE TABLE `author` (
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成日時',
   `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日時',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='作者';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='作者';
 
 CREATE TABLE `magazine` (
   `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '雑誌ID',
@@ -50,7 +50,7 @@ CREATE TABLE `magazine` (
   UNIQUE KEY `uni_magazine_01` (`title_path`),
   INDEX `idx_magazine_01` (`title_path`, `release_timing`),
   INDEX `idx_magazine_02` (`publisher_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='雑誌';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='雑誌';
 
 CREATE TABLE `publisher` (
   `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '出版社ID',
@@ -61,7 +61,7 @@ CREATE TABLE `publisher` (
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成日時',
   `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日時',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='出版社';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='出版社';
 
 CREATE TABLE `retension_info` (
   `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '保持データID',
@@ -83,4 +83,4 @@ CREATE TABLE `code` (
   `status` TINYINT(1) NOT NULL DEFAULT 0 COMMENT 'ステータス',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uni_code_01` (`type`, `key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='コードマスタ';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='コードマスタ';

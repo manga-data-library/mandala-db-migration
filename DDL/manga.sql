@@ -21,4 +21,4 @@ CREATE TABLE `manga` (
   INDEX `idx_manga_02` (`author_id`),
   INDEX `idx_manga_03` (`original_author_id`),
   INDEX `idx_manga_04` (`magazine_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='漫画';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='漫画';

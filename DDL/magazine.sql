@@ -15,4 +15,4 @@ CREATE TABLE `magazine` (
   UNIQUE KEY `uni_magazine_01` (`title_path`),
   INDEX `idx_magazine_01` (`title_path`, `release_timing`),
   INDEX `idx_magazine_02` (`publisher_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='雑誌';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='雑誌';

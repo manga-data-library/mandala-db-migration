@@ -7,4 +7,4 @@ CREATE TABLE `code` (
   `status` TINYINT(1) NOT NULL DEFAULT 0 COMMENT 'ステータス',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uni_code_01` (`type`, `key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_unicode_ci COMMENT='コードマスタ';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='コードマスタ';
