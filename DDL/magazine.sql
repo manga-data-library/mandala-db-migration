@@ -10,7 +10,7 @@ CREATE TABLE `magazine` (
   `release_timing` TINYINT(2) NOT NULL DEFAULT 0 COMMENT 'リリースタイミング',
   `status` TINYINT(1) NOT NULL DEFAULT 0 COMMENT 'ステータス',
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '作成日時',
-  `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP '更新日時',
+  `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日時',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uni_magazine_01` (`title_path`),
   INDEX `idx_magazine_01` (`title_path`, `release_timing`),
